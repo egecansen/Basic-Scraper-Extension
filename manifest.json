@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Scrape",
+    "version":"0.01",
+    "description":"Scraper",
+    "host_permissions":["<all_urls>"],
+    "action":{
+        "default_title":"Scrapy",
+        "default_popup":"popout.html"
+    },
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "js": ["contentScript.js"],
+        "run_at":"document_end"
+    }]
+}
